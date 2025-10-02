@@ -1,0 +1,21 @@
+[project]
+name = "builder-template"
+description = "A simple node demonstrating how to build custom nodes in Rust!"
+version = "1.0.16"
+license = { file = "LICENSE" }
+classifiers = ["Operating System :: OS Independent"]
+
+[project.urls]
+Repository = "https://github.com/milewski/comfy-builder-template"
+Documentation = "https://github.com/milewski/comfy-builder-template/wiki"
+"Bug Tracker" = "https://github.com/milewski/comfy-builder-template/issues"
+
+[tool.comfy]
+PublisherId = "comfy-builder"
+DisplayName = "comfy-builder-template"
+Icon = "https://github.com/milewski/comfy-builder-template/icon.png"
+includes = []
+
+[build-system]
+requires = ["maturin>=1.0,<2.0", "toml"]
+build-backend = "maturin"

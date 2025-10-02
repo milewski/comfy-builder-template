@@ -1,0 +1,17 @@
+[package]
+name = "comfy-builder-template"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "comfy_builder_template"
+crate-type = ["cdylib"]
+
+[dependencies]
+comfy-builder-core = "0.0.2"
+pyo3 = "0.26.0"
+indexmap = "2.11.4"
+inventory = "0.3.21"
+
+[build-dependencies]
+comfy-builder-core = "0.0.2"
