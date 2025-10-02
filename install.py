@@ -47,7 +47,8 @@ def generate_init():
         crate_name = tomllib.load(f).get("lib", {}).get("name")
     if crate_name:
         with open("__init__.py", "w", encoding="utf-8") as f:
-            f.write(f"# Auto-generated __init__.py\nfrom {crate_name} import *\n")
+            f.write(f"# Auto-generated __init__.py\n")
+            f.write(f"from {crate_name} import *\n")
         print(f"✅ __init__.py generated for crate '{crate_name}'")
     else:
         print("⚠️ Could not find [lib] name in Cargo.toml")
