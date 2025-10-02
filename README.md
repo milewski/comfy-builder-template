@@ -6,7 +6,7 @@ This is a template repository that you can use as a starting point for building 
 
 Follow these steps to get started with building your custom node:
 
-1. Clone the Repository or click on `Use this template` above:
+1. Clone the repository or [click here](https://github.com/new?template_name=comfy-builder-template&template_owner=milewski).
 2. Rename Your Custom Node
    - Modify the name of your custom node. It must be unique
    - Change the `package.name` and `lib.name` in `Cargo.toml` to your desired node name.
