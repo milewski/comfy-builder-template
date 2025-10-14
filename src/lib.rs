@@ -1,4 +1,5 @@
 use comfy_builder_core::prelude::*;
+use std::error::Error;
 
 #[derive(NodeInput)]
 pub struct Input {
@@ -11,24 +12,24 @@ pub struct Output {
     sum: usize,
 }
 
-#[node]
+#[node(
+    category = "MyNode / Math",
+    description = "Sums the left input with the right input"
+)]
 pub struct Sum;
 
 impl<'a> Node<'a> for Sum {
     type In = Input;
     type Out = Output;
+    type Error = Box<dyn Error + Send + Sync>;
 
-    const CATEGORY: &'static str = "MyNode / Math";
-
-    const DESCRIPTION: &'static str = r#"
-        Sums the left input with the right input.
-    "#;
-
-    fn execute(&self, input: Self::In) -> NodeResult<'a, Self> {
+    fn execute(&self, input: Self::In) -> Result<Self::Out, Self::Error> {
         Ok(Output {
-            sum: input.left + input.right
+            sum: input.left + input.right,
         })
     }
 }
 
-boostrap!();
+boostrap!(
+    api_version: "latest"
+);

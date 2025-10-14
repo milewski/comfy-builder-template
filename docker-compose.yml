@@ -1,13 +1,12 @@
 services:
   comfyui:
     image: yanwk/comfyui-boot:cu129-slim
-#    volumes:
-#      - ./packages/comfyui-custom-nodes:/root/ComfyUI/custom_nodes/comfyui-custom-nodes
-#      - ./target/wheels:/wheels:ro
-#      - ./custom_nodes:/root/ComfyUI/custom_nodes
+    volumes:
+      - .:/root/ComfyUI/custom_nodes/comfy_builder_template
+    working_dir: /root/ComfyUI/custom_nodes/comfy_builder_template
     ports:
       - "8188:8188"
-#    command: sh -c "bash /runner-scripts/entrypoint.sh"
+    command: sh -c "python3 install.py && bash /runner-scripts/entrypoint.sh"
     deploy:
       resources:
         reservations:
