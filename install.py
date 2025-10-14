@@ -37,6 +37,7 @@ def clean_up():
     print("🧹 Running cargo clean to trim dependencies...")
     try:
         run_command(["cargo", "clean"])
+        run_command(["rm", "rustup-init.sh"])
         print("✅ cargo clean completed")
     except FileNotFoundError:
         print("⚠️ cargo not found (is Rust installed?)")
