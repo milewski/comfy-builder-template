@@ -8,9 +8,9 @@ name = "comfy_builder_template"
 crate-type = ["cdylib"]
 
 [dependencies]
-comfy-builder-core = "0.0.4"
+comfy-builder-core = "0.0.7"
 pyo3 = "0.26.0"
 inventory = "0.3.21"
 
 [build-dependencies]
-comfy-builder-core = "0.0.4"
+comfy-builder-core = "0.0.7"

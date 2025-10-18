@@ -85,9 +85,9 @@ checksum = "2fd1289c04a9ea8cb22300a459a72a385d7c73d3259e2ed7dcb2af674838cfa9"
 
 [[package]]
 name = "comfy-builder-core"
-version = "0.0.4"
+version = "0.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d56efca1eed4c28d45c594237d68f85c3053bfaee78a1ac42951c5d0ddc587e0"
+checksum = "8780611b243007c45e499b5ef602d3822a95dbb3758cd6ca7ecdd99f91545bae"
 dependencies = [
  "candle-core",
  "comfy-builder-macros",
@@ -99,10 +99,11 @@ dependencies = [
 
 [[package]]
 name = "comfy-builder-macros"
-version = "0.0.4"
+version = "0.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eb70b4c5db462effedbd0b1ea682fc1d72401c05149be7de37455b708d403ffd"
+checksum = "4ede4f2beb4e39a2d17af7fabd7456a83e43accb4c3f5f5898707387f9412bd7"
 dependencies = [
+ "heck",
  "proc-macro2",
  "quote",
  "syn",
